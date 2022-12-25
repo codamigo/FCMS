@@ -1,0 +1,40 @@
+
+
+// Mobile first media query
+$layout-xs    : 320px !default;
+$layout-sm    : 768px !default;
+$layout-md    : 1024px !default;
+$layout-lg    : 1200px !default;
+
+
+// Smart Breakpoints Map
+$breakpoints: (
+    'xs': $layout-xs,
+    'sm': $layout-sm,
+    'md': $layout-md,
+    'lg': $layout-lg );
+
+
+// Global Mixins
+@mixin respond-to ($key, $media:screen) {
+    // If key is present
+    @if map-has-key($breakpoints , $key) {
+        // Renders media based on the value
+        // Returns string containing the value as SASS representation
+        @media #{$media} and (min-width: #{map-get($breakpoints, $key)}) {
+            @content;
+        }
+    }
+
+    // Coping with invalid keys
+    @else {
+        @warn "No key could be retrieved from '#{$breakpoints}'";
+    }
+}
+
+
+@mixin respond-to-ie ($media:screen) {
+    @media #{$media} and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+        @content;
+    }
+}

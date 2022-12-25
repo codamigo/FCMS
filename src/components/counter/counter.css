@@ -1,0 +1,15 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-counter {
+        @apply px-4 py-2 font-semibold leading-5 text-white bg-indigo-600 rounded-md hover:bg-indigo-500 sm:px-8 sm:py-3;
+    }
+}
+
+@layer components {
+    .btn-holder {
+        @apply flex divide-x divide-slate-400/20 overflow-hidden rounded-md bg-white text-[0.8125rem] font-bold leading-10 text-slate-900 shadow-sm ring-1 ring-slate-700/10;
+        @apply cursor-pointer; 
+    }
+}

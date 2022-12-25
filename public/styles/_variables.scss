@@ -1,0 +1,37 @@
+
+// Application-wide SASS variables
+$font-base-size           : 12px; // TODO: which unit for fonts should be used.
+$font-base-line-height    : 1.5px;
+$link-decoration          : underline;
+$link-color               : black;
+
+
+// zIndex variables
+// TODO: subject to review the indexes
+$zIndex-dropdown    : 1000 !default;
+$zIndex-sticky      : 1020 !default;
+$zIndex-fixed       : 1040 !default;
+$zIndex-backdrop    : 1060 !default;
+$zIndex-modal       : 1080 !default;
+$zIndex-popover     : 1100 !default;
+$zIndex-tooltip     : 1120 !default;
+
+
+// SVG variables
+// TODO:
+$svgIcon-spinner:'data:image/svg+xml,%3Csvg xmls="http://www.w3.org/2000/svg"';
+
+
+// Global transition-all
+$transition-all         : all 350ms ease-in-out;
+$transition-all-fast    : all 250ms ease-in-out;
+
+// Common Helpers
+$dim-xs   : 4px  !default;
+$dim-sm   : 8px  !default;
+$dim-md   : 16px !default;
+$dim-lg   : 24px !default;
+$dim-xl   : 32px !default;
+$dim-xxl  : 40px !default;
+$dim-xxxl : 48px !default;
+

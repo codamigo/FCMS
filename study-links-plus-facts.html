@@ -1,0 +1,199 @@
+<h2>https://www.nuxeo.com/blog/enterprise-content-management-ecm-benefits-features/</h2>
+<div>
+    Answering the first question, CMS are of two kinds - ECM (Enterprise Content Management) 
+    and WCM (Web Content Management). The first ones majorly uses relational database softwares 
+    like Oracle, MySQL, SQL Server etc. Whereas, the second ones are broadly using NoSQL Document-store databases 
+    like MongoDB or Cassandra etc.
+
+    Other than that, there are DAM (Digital Asset Management) applications which heavily deals with media files.
+</div>
+
+<div>
+    // features of Enterprise Content Management
+    1. Document Management 
+    2. Automation 
+    3. Secure Collaboration 
+    4. Enterprise Search 
+    5. Records Management 
+    6. Integration with existing systems
+</div>
+
+<div>
+    // Benefits of Enterprise Content Management
+    1. Improved Security
+        The system provides comprehensive access permissions, detailed user activity tracking, and document versioning and 
+        encryption enabling the organization to rest assured that their documents are safe and sound.
+    2.Strengthened Compliance & Governance
+        it has complied with regulations based on accurate access and usage information, verified through detailed audits.
+    3. Increased Productivity and Efficiency
+        When content is well-organized but still easily accessible, organizations can streamline business processes, 
+        quickly locate information, and enable employees to focus their attention on critical tasks instead of time-consuming administrative work.
+</div>
+
+<div>
+    // Key Features of Enterprise Content Management
+    1. Document Management
+        From capture, document version control, and audit tracking capabilities to complex security features, 
+        search functionality, indexing, and administration, document management is at the heart of ECM systems.
+    2. Automation
+        Automated Business Process Management (BPM) is an organization’s key to removing mundane manual processes   
+        From simple document routing based on metadata, through document approvals, to complex business processes, 
+        workflow and automation of activities is what many think of when talking about ECM.
+    3. Secure Collaboration
+        ECM secure collaboration capabilities make use of technologies such as granular access permissions, 
+        document encryption, and version control to give users the benefit of working in a safe, 
+        controlled environment from any device or location they choose.
+    4. Enterprise Search
+        The numbers speak for themselves, but there is an additional challenge. Most organizations have content scattered across the business in multiple, disconnected systems. Any effective content search capability needs to bridge these silos of information to enable users to search, find and distribute relevant information efficiently, irrespective of where the original content resides.
+    5. Records Management
+        These content retention and disposition schedules and their associated control are known as records management.
+    6. Integration with Existing IT
+
+</div>
+
+<div>
+    // Components of Enterprise Content Management
+    // Seven pillars of ECM 
+
+    1. Capture
+        - Modern systems now collect information from emails, images, videos, faxes, completed forms, and more.
+        - 
+        Collects and organizes content into a cohesive structure.
+        Extracts information from within the content.
+        Classifies the content.
+        Defines any required naming or metadata.
+        Sends the content to its next destination.
+
+        During this process numerous technologies are used to automate the classification and extraction of data from 
+        the raw content. Optical character recognition (OCR), Artificial Intelligence (AI), machine vision, 
+        and Natural Language Processing (NLP), all play a part in helping to turn unstructured content into 
+        structured data for processing.
+    2. Manage
+        Document creation
+        Document editing and collaboration
+        Version control
+        Secure sharing
+        User roles and permissions
+        Workflow and Business Process Management
+    3.Store
+        Established user and role-based permissions govern content by controlling access to viewing, 
+        editing, and sharing information. Further preserving file integrity and security, 
+        detailed audit trails report all user activity.
+    4.Preserve
+        ECM’s Preserve component, via records management and archival capabilities, 
+        allows an organization to securely store and continually back up content for the medium and long term, 
+        keeping accessibility and usability intact.
+    5. Access
+        Users can access content from the ECM system in many ways — using folder structures, 
+        via search capabilities, or via custom case-management interfaces. Such access can be delivered via mobile devices, 
+        desktops, or web systems. The key requirement for access is that end-users are able to quickly retrieve the information they seek, in a secure manner, in line with corporate permissions and governance policies.
+    6. Automate
+        Many have argued that Automation is the true magic of ECM systems and their ability to streamline operations and increase productivity.
+</div>
+
+<h2>
+    https://www.nuxeo.com/solutions/ecm-enterprise-content-management/
+</h2>
+<div>
+    • Ingestion
+    • Classification
+    • Search
+    • Browse
+    • Native file viewers
+    • Check-in/out
+    • Lock
+    • Collaborative editing
+    • Document authoring
+    • Versioning
+    • Secure file sharing
+    • Security
+    • Audit
+    • Workflow designer
+    • Task manager
+    • Records management
+    • Integration to key capture
+    • Integration to digital signature
+</div>
+
+
+<h2>https://www.nuxeo.com/content-services-platform/studio/</h2>
+<h2>https://www.nuxeo.com/content-services-platform/web-ui/</h2>
+<h2>https://www.ibm.com/docs/en/products</h2>
+
+<div>
+    Flexible authoring capabilities using common desktop authoring tools
+    Support for common file formats
+    Ability to allow or restrict specific access and action permissions
+    Full text indexing of unstructured content and the ability to search on the content and its metadata
+    Automated classification of existing and new content
+    System-wide audit and tracking capability
+    Versioning of content with check in and check out feature
+    Integrated security and access management
+    Open interfaces to integrate with other applications and systems and deliver highly-specialized applications
+    Content transformation
+    Enterprise-level availability and scalability
+</div>
+<div>
+    I need to have the ability to control the workflow of the articles, companies, products.
+    All with multiple language support and multiple versioning.
+</div>
+<div>Article (articleID, langID, ENUTitle, ENUContent, authorID)</div>
+<div>Article_Translation(ID, articleID, langID, langTitle, langContent)</div>
+<div>
+    insert into article values ('art101','ENU','New Website for Developers','Stackoverflow is new and useful','BKM')
+    Insert into article_translation (1023, 'art101','FRA','nouveau site Web pour les développeurs','stackoverflow est nouveau et utile','BKM')
+    Insert into article_translation (1024, 'art101','SPA','nuevo sitio web para desarrolladores','Stackoverflow es nuevo y útil','BKM')
+</div>
+
+<div>What are best practices for multi-language database design?</div>
+<div>https://www.apphp.com/tutorials/index.php?page=multilanguage-database-design-in-mysql</div>
+
+
+<div>
+    What we do, is to create two tables for each multilingual object.
+    E.g. the first table contains only language-neutral data (primary key, etc.) and the second table contains one record per language, containing the localized data plus the ISO code of the language.
+    In some cases we add a DefaultLanguage field, so that we can fall-back to that language if no localized data is available for a specified language.
+</div>
+<div>
+    Table "Product":
+    ----------------
+    ID                 : int
+    <any other language-neutral fields>
+        Table "ProductTranslations"
+        ---------------------------
+        ID                 : int      (foreign key referencing the Product)
+        Language           : varchar  (e.g. "en-US", "de-CH")
+        IsDefault          : bit
+        ProductDescription : nvarchar
+    <any other localized data>
+</div>
+
+<div>
+    But you seem to be concerned about your queries getting too complex:
+
+    So you might be thinking, that instead of writing simple queries like this:
+    select price, name, description from products where price < 100;
+
+    You would need to start writing queries like that:
+    Select p.price, pt.name, pt.description from Products p JOIN ProductTranslations pt ON (p.id = pt.id AND pt.lang = 'en') WHERE price < 100;
+</div>
+
+<div>
+    But instead of doing it manually you should develop your own database access class, that pre-parses the SQL that contains your special localization markup and converts it to the actual SQL you will need to send to the database.
+    Using that system might look something like this
+
+    db.setLocale("en");
+    db.query("Select p.price, _(p.name), _(p.description) from _(Products p) WHERE price < 100");
+</div>
+
+<div>
+    I find this type of approach works for me :-
+    <Product     ProductDetail        Country>
+    =========   ==================   =========
+    ProductId   ProductDetailId      CountryId
+    - etc -     ProductId            CountryName
+                CountryId            Language
+                ProductName          - etc -
+                ProductDescription
+                - etc -
+</div>

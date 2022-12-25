@@ -1,0 +1,19 @@
+{
+    "componentDefinition": [
+        {
+            "componentName":"Product",
+            "tabName":"app-product-screener"
+        }
+    ],
+    "minify":false,
+    "linkMap" : {
+        "root":"/",
+        "errorPage":"",
+        "productScreenerV2Api":"",
+        "productPage":"",
+        "libraryPage":""
+    },
+    "requestedServiceMappings":["api-gateway", "tools"],
+    "jsPaths": ["runtime.js", "polyfills-es5.js","polyfills.js", "script.js", "vender.js", "main.js"],
+    "cssPaths":["assets/sass/fonts.scss", "styles.scss"]
+}
